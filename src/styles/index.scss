@@ -1,13 +1,114 @@
-@import "~bootstrap/scss/bootstrap.scss";
+html {
+  background: linear-gradient(#08f, #fff);
+  padding: 40px;
+  width: 170px;
+  height: 100%;
+  margin: 0 auto;
+}
 
-/* 
+.protector{
+  background: transparent;
+  width: 180px;
+  height: 0;
+  position: absolute;
+  top: 20px;
+  left: -35px;
+  border-right: solid 30px transparent;
+  border-left: solid 30px transparent;
+  border-top: solid 90px #111;
+  border-radius: 10px;
+  z-index: -1;
+}
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+.protector:nth-child(2){
+  top: 140px;
+}
 
-*/
+.protector:nth-child(3){
+  top: 260px;
+}
+
+.trafficlight{
+  background: #222;
+  border-color: white;
+  background-image: linear-gradient(transparent 2%, #111 2%, transparent 3%, #111 30%);
+  width: 175px;
+  height: 400px;
+  border-radius: 10px;
+  position: relative;
+  border: solid 5px #333;
+}
+
+
+.trafficlight:before{
+  background: #222;
+  background-image: radial-gradient(#444, #000);
+  content: "";
+  width: 170px;
+  height: 150px;
+  margin: 0 auto;
+  position: absolute;
+  top: -30px;
+  margin-left: 0px;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.trafficlight:after{
+  background: #222;
+  background-image: linear-gradient(-0deg, #444, #ccc 30%, #000);
+  content: "";
+  width: 75px;
+  height: 800px;
+  margin-left: 50px;
+  position: absolute;
+  top: 150px;
+  z-index: -1;
+}
+
+.top {
+    height: 100px;
+    width: 40px;
+    margin: auto;
+}
+
+.light {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin: 5px;
+    &.red {  background: red;
+  background-image: radial-gradient(brown, transparent);
+  background-size: 5px 5px; 
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+  top: 20px;
+  left: 35px;}
+
+    &.yellow { background: yellow;
+  background-image: radial-gradient(orange, transparent);
+  background-size: 5px 5px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+  top: 145px;
+  left: 35px;}
+
+    &.green {  background: green;
+  background-image: radial-gradient(lime, transparent);
+  background-size: 5px 5px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+  top: 270px;
+  left: 35px;}
+}
+
+.glow {
+    box-shadow: 0px 0px 50px yellow;
+}
+
